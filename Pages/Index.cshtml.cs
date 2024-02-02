@@ -12,6 +12,7 @@ namespace WebApp.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        public JsonFileProductsService ProductsService;
 
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductsService productsService)
