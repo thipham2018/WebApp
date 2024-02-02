@@ -13,7 +13,7 @@ namespace WebApp.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        public JsonFileProductsService ProductsService;
+        public JsonFileProductsService ProductService;
         public IEnumerable<Product> Products { get; private set; }
 
         public IndexModel(ILogger<IndexModel> logger,
@@ -24,7 +24,7 @@ namespace WebApp.Pages
 
         public void OnGet()
         {
-
+            Products = ProductService.GetProducts();
         }
     }
 }
