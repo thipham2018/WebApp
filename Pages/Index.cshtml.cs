@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApp.Models;
 using WebApp.Services;
 
 namespace WebApp.Pages
@@ -13,6 +14,7 @@ namespace WebApp.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public JsonFileProductsService ProductsService;
+        public IEnumerable<Product> Products { get; private set; }
 
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductsService productsService)
