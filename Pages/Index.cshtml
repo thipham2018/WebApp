@@ -8,7 +8,11 @@
     <h1 class="display-4">web app</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-@foreach (var product in Model.Products)
-{ 
-    <h1>@product.Title</h1>
-}
+
+
+<div class="card-columns">
+    @foreach (var product in Model.Products)
+    {
+        <h2>@product.Title</h2>
+    }
+</div>
