@@ -16,7 +16,8 @@ namespace WebApp.Pages
         public JsonFileProductsService ProductService;
         public IEnumerable<Product> Products { get; private set; }
 
-        public IndexModel(ILogger<IndexModel> logger,
+        public IndexModel(
+            ILogger<IndexModel> logger,
             JsonFileProductsService productService)
         {
             _logger = logger;
