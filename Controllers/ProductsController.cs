@@ -11,20 +11,28 @@ namespace WebApp.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-        public class ProductsController : ControllerBase
+    public class ProductsController : ControllerBase
+    {
+        public ProductsController(JsonFileProductsService productService)
         {
-           public ProductsController(JsonFileProductsService productService)
+            this.ProductService = productService;
+        }
+
+        public JsonFileProductsService ProductService { get; }
+
+        [HttpGet]
+        public IEnumerable<Product> Get()
+        {
+            return ProductService.GetProducts();
+        }
+        [Route("Rate")]
+        [HttpGet]
+        public ActionResult Get(
+            [FromQuery] string ProductId,
+            [FromQuery] int Rating)
             {
-                 this.ProductService = productService;
+            ProductService.AddRating(ProductId, Rating);
+            return Ok();
             }
-
-            public JsonFileProductsService ProductService { get; }
-
-            [HttpGet]
-            public IEnumerable<Product> Get()
-            {
-                  return ProductService.GetProducts();
-             }
-
     }
 }
