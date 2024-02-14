@@ -20,6 +20,7 @@ namespace WebApp.Controllers
 
         public JsonFileProductsService ProductService { get; }
 
+        //[HttpPatch] "[FromBody]"
         [HttpGet]
         public IEnumerable<Product> Get()
         {
