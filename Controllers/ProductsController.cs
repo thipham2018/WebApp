@@ -14,7 +14,7 @@ namespace WebApp.Controllers
     {
         public ProductsController(JsonFileProductsService productsService)
         {
-          //  this.ProductsService = productsService;
+          this.ProductsService = productsService;
 
         }
         public JsonFileProductsService ProductsService { get; }
