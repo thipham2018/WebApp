@@ -54,13 +54,13 @@ namespace WebApp
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+               /* endpoints.MapRazorPages();
                 endpoints.MapGet("/products", (context) =>
                   {
                       var products = app.ApplicationServices.GetService<JsonFileProductsService>().GetProducts();
                       var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
-                         return context.Response.WriteAsync(json);
-                  });
+                      return context.Response.WriteAsync(json);
+                  });*/
             });
         }
     }
