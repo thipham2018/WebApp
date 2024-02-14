@@ -59,7 +59,7 @@ namespace WebApp
                   {
                       var products = app.ApplicationServices.GetService<JsonFileProductsService>().GetProducts();
                       var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
-                   //   return context.Response.WriteAsync(json);
+                         return context.Response.WriteAsync(json);
                   });
             });
         }
