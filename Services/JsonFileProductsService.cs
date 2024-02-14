@@ -11,7 +11,7 @@ namespace WebApp.Services
 {
     public class JsonFileProductsService
     {
-        private string productId;
+      //  private string productId;
 
         public JsonFileProductsService(IWebHostEnvironment webHostEnvironment)
         {
@@ -52,7 +52,17 @@ namespace WebApp.Services
                 ratings.Add(rating);
                 query.Ratings = ratings.ToArray();
             }
-
+            using (var outputStream = File.OpenWrite(JsonFileName))
+            {
+                JsonSerializer.Serialize<IEnumerable<Product>>(
+                    new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                    {
+                        SkipValidation = true,
+                        Indented = true
+                    }),
+                    products
+                );
+            }
         }
     }
 }
