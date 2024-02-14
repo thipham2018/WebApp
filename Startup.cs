@@ -28,7 +28,9 @@ namespace WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllers();
             services.AddTransient<JsonFileProductsService>();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,14 +56,16 @@ namespace WebApp
 
             app.UseEndpoints(endpoints =>
             {
-               /* endpoints.MapRazorPages();
-                endpoints.MapGet("/products", (context) =>
-                  {
-                      var products = app.ApplicationServices.GetService<JsonFileProductsService>().GetProducts();
-                      var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
-                      return context.Response.WriteAsync(json);
-                  });*/
-            });
+                endpoints.MapRazorPages();
+                endpoints.MapControllers();
+
+              /*  endpoints.MapGet("/products", (context) =>
+                   {
+                       var products = app.ApplicationServices.GetService<JsonFileProductsService>().GetProducts();
+                       var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
+                       return context.Response.WriteAsync(json);
+                       //});*/
+                   });
         }
     }
 }

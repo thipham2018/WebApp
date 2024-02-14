@@ -9,23 +9,21 @@ using WebApp.Services;
 
 namespace WebApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
-    {
-        public ProductsController(JsonFileProductsService productService)
+        public class ProductsController : ControllerBase
         {
-          this.ProductService = productService;
+            public ProductsController(JsonFileProductsService productService)
+            {
+                 this.ProductService = productService;
+            }
+             public JsonFileProductsService ProductService { get; }
 
-        }
-        public JsonFileProductsService ProductService { get; }
-
-        [HttpGet]
-        public IEnumerable<Product> Get()
-        {
-            return ProductService.GetProducts();
-        }
-
+            [HttpGet]
+            public IEnumerable<Product> Get()
+            {
+                  return ProductService.GetProducts();
+             }
 
     }
 }
