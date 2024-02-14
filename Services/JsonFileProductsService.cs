@@ -33,6 +33,9 @@ namespace WebApp.Services
             }
 
         }
+        public void AddRating(string productID, int rating)
+        {
 
+        }
     }
 }
