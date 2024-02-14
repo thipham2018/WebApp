@@ -13,17 +13,17 @@ namespace WebApp.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        public ProductsController(JsonFileProductsService productsService)
+        public ProductsController(JsonFileProductsService productService)
         {
-          this.ProductsService = productsService;
+          this.ProductService = productService;
 
         }
-        public JsonFileProductsService ProductsService { get; }
+        public JsonFileProductsService ProductService { get; }
 
         [HttpGet]
         public IEnumerable<Product> Get()
         {
-            return ProductsService.GetProducts();
+            return ProductService.GetProducts();
         }
 
 
