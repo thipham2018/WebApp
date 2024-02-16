@@ -25,5 +25,14 @@
 </div>
 
 @code {
+    Product selectProduct;
+    string selectProductId;
+
+    void SelectProduct(string productId)
+    {
+        selectProductId = productId;
+        selectProduct = ProductService.GetProducts().First(x => x.Id == productId);
+
+    }
 
 }
