@@ -24,7 +24,7 @@
     }
 </div>
 
-@if (selectProduct != null)
+@if (selectedProduct != null)
 {
     <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -57,13 +57,13 @@
 
 
 @code {
-    Product selectProduct;
-    string selectProductId;
+    Product selectedProduct;
+    string selectedProductId;
 
     void SelectProduct(string productId)
     {
-        selectProductId = productId;
-        selectProduct = ProductService.GetProducts().First(x => x.Id == productId);
+        selectedProductId = productId;
+        selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
 
     }
 
