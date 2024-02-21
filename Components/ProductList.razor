@@ -75,7 +75,10 @@
     string voteLabel;
     void GetCurrentRating()
     {
-
+        if (selectedProduct.Ratings == null)
+        {
+            currentRating = 0;
+        }
     }
 
 }
