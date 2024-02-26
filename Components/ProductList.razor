@@ -48,14 +48,14 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    @if(voteCount == 0)
-                {
-                    <span>Be the first to vote</span>
+                    @if (voteCount == 0)
+                    {
+                        <span>Be the first to vote</span>
                     }
                     else
-                {
-                    <span>@voteCount @voteLabel</span>
-                }
+                    {
+                        <span>@voteCount @voteLabel</span>
+                    }
                     @for (int i = 0; i < 6; i++)
                     {
                         var currentStar = i;
@@ -65,7 +65,7 @@
                         }
                         else
                         {
-
+                            <span class="fa-star fa checked" @onclick="(e => SubmitRating(currentStar))"></span>
                         }
                     }
 
