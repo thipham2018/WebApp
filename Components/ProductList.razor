@@ -67,6 +67,7 @@
     {
         selectedProductId = productId;
         selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
+        GetCurrentRating();
 
     }
 
@@ -88,8 +89,8 @@
             currentRating = selectedProduct.Ratings.Sum() / voteCount;
         }
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}:{currentRating}");
-        ProductService.AddRating(selectedProductId, rating);
-    }
+      
+        }
 
     void SubmitRating(int rating)
     {
