@@ -61,7 +61,7 @@
                         var currentStar = i;
                         if (i <= currentRating)
                         {
-                            <span class="fa-star fa checked"></span>
+                            <span class="fa-star fa checked" @onclick="(e => SubmitRating(currentStar))"></span>
                         }
                         else
                         {
