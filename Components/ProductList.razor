@@ -88,7 +88,15 @@
             currentRating = selectedProduct.Ratings.Sum() / voteCount;
         }
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}:{currentRating}");
+        ProductService.AddRating(selectedProductId, rating);
     }
 
+    void SubmitRating(int rating)
+    {
+        System.Console.WriteLine($"Current rating for {selectedProduct.Id}:{rating}");
+        ProductService.AddRating(selectedProductId, rating);
+        SelectProduct(selectedProductId);
+
+    }
 }
 
