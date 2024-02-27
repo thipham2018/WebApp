@@ -54,7 +54,19 @@
     "Url": "https://twitter.com/sailorhg/status/1090113666911891456",
     "Title": "Light-up Corsage",
     "Description": "Light-up corsage I made with my summer intern.",
-    "Ratings": null
+    "Ratings": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
   },
   {
     "Id": "sailorhg-kit",
@@ -99,7 +111,10 @@
     "Url": "https://www.vogueandcode.com/shop/hipster-dev-bro",
     "Title": "Hipster Dev",
     "Description": "Hipster Dev is busy coding away while styled in a camo jacket and orange beanie.",
-    "Ratings": null
+    "Ratings": [
+      1,
+      2
+    ]
   },
   {
     "Id": "vogueandcode-pretty-girls-code-tee",
@@ -121,21 +136,7 @@
       3,
       5,
       5,
-      4,
-      3,
-      2,
-      1,
-      4,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5,
-      5
+      4
     ]
   },
   {
